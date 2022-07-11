@@ -170,3 +170,7 @@ Relative path is defined as the path related to the present working directly(pwd
 3.vi
 * creating directories
 1.mkdir
+
+
+18. Copy of directories:
+cp -R <source_folder> <destination_folder>
