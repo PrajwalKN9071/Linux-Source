@@ -1,0 +1,258 @@
+COMMANDS: man ls :user commands all options
+
+* ctrl + c : To get your promt back 
+* whoami : to get who is logged in
+* hostnameto : get host name
+* top : to get real time
+* ifconfig : to get ip address of vm
+* ip a : updated command for ifconfig
+* ls : list all files in the directory
+* ls -l : i tag is used to display detailes version of every file and directory available
+* ls -ltr :oldest one at top
+* exit : to exit from user
+* rm filename : to remove files
+* ls -l abc* : list file which starts with abc
+* cat filename : to read content of the file
+* echo "hi file" >> filename
+* ls -lt : list file on basis of time
+
+
+
+
+
+
+
+1.linux is a case sensitive OS(recomment you to always use lower case)
+
+2.CentOS: is a commmunity enterprise os(Greg kurtzer invented in 2004 and took code from redhat)
+and redhat acquired cemtos in 2014 and it is upstream
+
+3.Snapshot:allows u to save consent of the vm
+make sure it is in poweroff state and go to snapshot give a name and give okay after that if you go ahead and make some changes and did some mistakes and u want to restore it again to the same state go to snapshot and select snapshot and click on restore 
+
+4.virtual machine management:
+
+5. Bridged Adapter:its gone a take ip address from the own compute and it will gonna communicate with outside world
+   Host-only adapter--> allows communication between ur pc and the vm
+
+6. Linux:                               
+    free                                   
+    not user frdly  
+    very reliable often runs for months or years
+    mostly enterprise levele softwares
+    best for multi-tasking
+    very secure
+    open to public
+   
+   Windows:
+     $$$
+     User frdly
+     often requires reboot
+     much larger selection of software 
+     multi tasking is available but with very high cpu or memory resources
+     some what secure
+     no an open source OS
+
+7. Linux users:
+*US Gov and Agencies
+*NASA
+*Health care
+*Bullet train 
+*Traffic control
+*Finance institute
+*Entertainment industries
+*World e-commerce leaders runs there application runs on linux
+
+
+8.Keyboard keys in Linux:
+Esc : to escape for previous pressed key
+~ (tilda) :to go to home directory
+! :to refered to as bank
+@ : to refer anyone
+# : to comment out and just for information purpose
+$ : variable
+^ : to go to beggining of the task
+& : to put something in the background
+* : star
+( : open paranthesis
+) : close paranthesis
+- : its is for option
+tab : skip some spaces
+| : to join two commands
+< >: is also referd in linus as input and output 
+>> : appending to the file
+> :overide a file
+/ : forward slash
+right ctrl : in linux if your mouse curson stuck somewhere press to diable that
+
+
+
+9.Commands prompts in Linux:
+It is a short text at the start of the command line, followed by prompt symbol
+                      
+[root@MyFirstLinuxVM-]#:
+root:username
+MyFirstLinuxVM:hostname
+#:Prompt symbol
+
+login as root means that this is the default user o we can access every key which is available in linux
+
+10. Access to linux system:
+ Each os has a different protocol or client tat is used to access the system 
+examples:
+windows : Remote desktop(RDP)
+VMware ESX : vSphere client
+Linux : Putty, SecureCRT,ssh from linux  to linux
+
+11. Import things to remember in Linux:
+* Linux has super-user account called root and that is the most powerfull a count that can create, modify, delete accounts and make changes to system config files
+* linus is case sensitive
+* avoid using spaces when creATING FILES AND DIRECTORIES
+* Linux kernel is not an os its a small software within linux os that takes commands from users and pass them to system hardware or peropherals
+* Linux is cli not a gui
+* linus is very flexible comapred to other os
+
+12. Linux File System:
+OS store data on disk drives in a structure of filesystem its consisting of files, directories, and info needed to access and locate them
+ex:ext3,ext4,XFS etc
+
+
+13. File system structure and its description: divided into different directory
+/boot : contains file used for boot loader
+/root : its a root username directory
+/dev : system devices like disk,speaker,flasdrive
+/etc : configuration files which come from linux
+/bin or /usr/bin : everyday user commands
+/sbin or /usr/sbin : syatem/filesystem commands
+/opt : optional add-on application (other application except default are there in this file)
+/proc : running processes ( only exist im memory)
+/lib or usr/lib : c programming library files needed by commands and apps                                                                     
+/tmp : temp files
+/home : directory for user
+/var : system logs
+/run : system daemon thats starts very early to store tempp runtime files like pid files
+/mnt :  to mount external filesystem
+/media : for cdrom mounts
+ 
+
+
+14. Navigating file system:
+when navigating a unix filesystem there are a few important commands
+cd: change directory
+pwd:print working directory
+ls : list directory
+clear : to clear the screen
+su - : to switch user to root
+cd / : to go to main starting / directory
+cd .. : one step back
+
+
+15. what is root?
+3 types of roots in linux
+* root account
+* root as
+* root home directory
+
+15. Path:
+* Absolute path:
+An absolute path is defined as the specifying the location of a file or directory from the root directory(/).
+* Realtive path:
+Relative path is defined as the path related to the present working directly(pwd). It starts at your current directory and never starts with a / .
+
+
+16. 
+* any files starts with "d" its directory
+* any files starts with "l" its a link
+* any files starts with "-" its a regular files
+
+
+17. Create files and directories:
+* creating files:
+1.touch <filename>
+2.cp <copying_filename> <destination file name> : copy existing file and create new
+3.vi
+* creating directories
+1.mkdir
+
+18. Copy of directories:
+cp -R <source_folder> </destination_folder>
+
+19. linux file types:
+-  : regular file
+d  : directory
+l  : link
+c  : specific file or device file
+s  : socket
+p : named pipe
+b  : block device
+
+20. Find files and directories:
+Two main commands are used to find files/directories
+
+*find : To find the files which is available in any director
+we could use this command : find . -name "filename"
+example:find . -name "kramer"
+
+*locate : if locate command does not output any result, then as root run "updatedb"
+also make sure you have "mlocate" package installed
+to check+ rpm -qa | grep mlocate
+to install = yum install mlocate
+
+
+21. difference b/w find and locate
+* locate uses a prebuild db, which should be regularly updated, while find iterates over a filesystem to locate files.thus locate is much faster than find
+but can be inaccurate if the db is not updated
+* to update local database run "updatedb" command
+
+
+22. changing password:
+command = passwd userid
+it will ask old password
+ask you new password
+recomform new password
+
+
+23. wildcards:
+a wildcard is a character that can be used in a substitute for
+any of a class of characters in a search
+
+* - represents zero or more character
+? - represents a single character
+[] - represents a range of character
+ other wildcards:
+\ : as an escape character
+^ : the beginning of the line
+$ : the end of the line
+
+24. to create 9 files:
+touch abcd{1..9}-xyz
+
+25. inode : pointer or number of a file on the hard disk
+to list inode command : ls -li
+ 
+command : ln -s
+soft link : link will be removed if file is removed or renamed
+
+command : ln 
+hard link : deleting renaming or moving the original file will not affect the hard link.
+
+Note : you cant  create soft or hard link within the same directory with the same name. that is why
+we will create linksin /temp directory
+
+
+26. File permission:
+there are 3 types of permission
+r - read
+w - write
+x - execute = running a program
+
+permission can be controlled at three levels:
+u - user=yourself
+g - group=can be people in the same project
+o - other-everyone on the system
+
+file or directory permission can be displayed by running by running this command
+ls -l
+
+command to change permission
+command : chmod 
