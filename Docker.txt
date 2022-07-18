@@ -1,0 +1,14 @@
+Docker:
+building,running and shipping of an application
+
+docker commands:
+1. docker version     --> to check the version
+2. mkdir hello-docker  --> to create a directory in docker as hello-docker
+3. cd hello-docker   --> to move to directory
+4. node app.js --> to run node version for the file which we have created in vs code that is app.js
+5. docker build -tag hello-docker  --> to build the image in directory
+6. docker images or docker image ls   --> to list all images which are available in docker
+7. docker run hello-docker --> to run that image in any a machine
+8. docker pull codewithmosh/hello-docker  --> to pull the image from the docker public repository
+9. docker ps --> running processes or container 
+10. docker run imagename --> to access any instances 
