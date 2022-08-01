@@ -1,0 +1,93 @@
+Commands
+1. kubectl run hello-minikube
+2. kubectl cluster-info
+3. kubectl get nodes
+4. kubectl run nginx --image nginx
+5. kubectl get pods
+6. kubectl describe pod nginx
+7. kubectl create -f pod-definition.yml
+8. kubectl get pos -o wide:nodes were the pods are placed
+9. kubectl run redis --image=redis123 --dry-run=client -o yaml > pod.yaml
+10. kubectl apply -f pod.yaml
+11. kubectl edit pod redis that should vs editor
+
+Replication controller:
+spec:
+ template:
+  pod
+
+scale up or down
+1. kubectls edit replicaset myapp-replicaset
+
+then edit at last and change there
+
+kubectl grt pods to check
+
+2. kubectl scale replicaset myapp-replicaset --replicas=2
+
+
+
+Deployement:
+new rollout new revision create
+
+1. kubectl rollout status deployment/myapp-deployment
+2. kubectl rollout history deploymrnt/myapp-deployme
+3. kubectl apply -f deployment-definition.yml
+4. kubectl set image deployment/myapp-deployment \nginx=nginx:1.9.1
+5. kubectl rollout undo deployment/myapp-deployment
+6. kubectl get replicasets
+7. minikube service myapp-service --url
+
+Summarize Commands
+   Create
+   Get
+   Update
+   Status
+   Rollback
+           >kubectl create -f deployment-definition.yml
+           >kubectl get deployments
+           >kubectl apply -f deployment-definition.yml
+           >kubectl set image deployment/myapp-deployment nginx-nginx:1.9.1
+           >kubectl rollout status deployment/myapp-deployment
+           >kubectl rollout history deployment/myapp-deployment
+           >kubectl rollout undo deployment/myapp-deployment
+se status
+
+to change the version of the image:
+1. kubectl set image deployment myapp-deployment nginx=nginx:1.8-perl --record
+
+
+
+Services types:
+nodeport
+clusterIP
+loadbalancer
+
+Range of node port : 30000-32767
+
+
+
+kubeadm join 10.3.0.5:6443 --token g5j7nx.6c75z6zz3ngy35cf \ --discovery-token-ca-cert-hash sha256:038aeffee767a40badc040cc0f8a8c7c55d1a74d28e85015b0621da38072d6de
+
+
+kubeadm join 10.3.0.5:6443 --token g5j7nx.6c75z6zz3ngy35cf \--discovery-token-ca-cert-hash sha256:038aeffee767a40badc040cc0f8a8c7c55d1a74d28e85015b0621da38072d6de
+
+
+
+
+
+
+
+
+
+kubeadm join 10.3.0.5:6443 --token g5j7nx.6c75z6zz3ngy35cf \
+        --discovery-token-ca-cert-hash sha256:038aeffee767a40badc040cc0f8a8c7c55d1a74d28e85015b0621da38072d6de
+
+
+
+
+
+[Yesterday 6:56 PM] Santosh Parab
+start theory - 1) Azure Kubernets architecture    2) Object in details (Pod replica sets, Deployments, Daemon sets, ), Controller in k8s, Manifest file for Pod, Deployments 4) Servicses in k8s
+ like 2
+
